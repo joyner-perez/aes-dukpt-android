@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AesDukpt</string>
+    <string name="get_dukpt_encripted_value">GET DUKPT ENCRIPTED VALUE</string>
+</resources>
