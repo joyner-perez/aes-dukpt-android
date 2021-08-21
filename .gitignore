@@ -24,12 +24,3 @@ Thumbs.db
 src/main/res/drawable/
 *.apk
 .externalNativeBuild/
-src/androidTest/java/com/cobis/gestionasesores/infrastructure/
-src/androidTest/java/com/cobis/gestionasesores/presentation/
-app/src/androidTest/java/com/cobis/gestionasesores/infrastructure/
-app/src/androidTest/java/com/cobis/gestionasesores/presentation/
-captures/
-libCore-2.0.0_rc13/
-/app/dev/release/output.json
-/app/prod/release/output.json
-/app/sust/release/output.json
