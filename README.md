@@ -1,45 +1,46 @@
-# Framework
+[![](https://jitpack.io/v/joyner-perez/aes_dukpt_x9.24-3-2017.svg)](https://jitpack.io/#joyner-perez/aes_dukpt_x9.24-3-2017)
+# Java AES DUKPT Library
 
-A set of components and libraries for Android
+Implementation of the ANSI AES DUKPT standard: specified within Retail Financial Services Symmetric Key Management Part 3: Using Symmetric Techniques (ANSI X9.24-3:2017).
 
+How to install with Gradle
+--------------
+1. Add it in your root build.gradle at the end of repositories:
 
-Framework is a set of components and libraries to develop android applications. This has the following modules: 
+		allprojects {
+			repositories {
+				...
+				maven { url 'https://jitpack.io' }
+			}
+		}
 
-* Core
-* Logger
+2. Add the dependency:
 
-
-## Core 
-Main componenent use to inject Android Context and others task like: 
-* IO
-* Utilities
-
-### Publish
-To publish new release in the Artifactory Server, execute the following command:
-```
-gradlew :core:assembleRelease :core:artifactoryPublish
-```
-
-### Installation
-```groovy
-dependencies {
-  compile 'com.bayteq.android:core:1.x.x'
-}
-```
-
-## Logger
-This component allows you to configure an independent and configurable log system of the default Android OS.
+		dependencies {
+			implementation 'com.github.joyner-perez:aes_dukpt_x9.24-3-2017:1.0.1'
+		}
 
 
-### Publish
-To publish new release in the Artifactory Server, execute the following command:
-```
-gradlew :logger:assembleRelease :logger:artifactoryPublish
-```
 
-## Installation
-```groovy
-dependencies {
-  compile 'com.bayteq.android:logger:1.x.x'
-}
-```
+
+
+How to install with Maven
+--------------
+1. Add the JitPack repository to your build file:
+
+        <repositories>
+            <repository>
+                    <id>jitpack.io</id>
+                    <url>https://jitpack.io</url>
+            </repository>
+        </repositories>
+
+   1. Add the dependency:
+
+           <dependency>
+               <groupId>com.github.joyner-perez</groupId>
+               <artifactId>aes_dukpt_x9.24-3-2017</artifactId>
+               <version>1.0.1</version>
+           </dependency>
+
+
