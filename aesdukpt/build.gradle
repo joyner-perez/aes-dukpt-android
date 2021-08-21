@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-group='com.joyner.aesdukpt'
+group='com.github.joyner-perez'
+version = '1.0.0'
 
 android {
     compileSdkVersion 31
@@ -24,20 +25,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-
-                groupId = 'com.joyner.aesdukpt'
-                artifactId = ''
-                version = '1.0.0'
-            }
-        }
     }
 }
 
