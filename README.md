@@ -22,13 +22,12 @@ How to install
 		
 How to use
 --
-	
 	ImplDukpt implDukpt = ImplDukpt.getInstance();
-        boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");
-        Log.d("CREATED INITIAL KEY", result ? "SUCCESS" : "ERROR");
+	boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");
+	Log.d("CREATED INITIAL KEY", result ? "SUCCESS" : "ERROR");
 
-        EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA);
-        if (encriptedResult != null) {
-            Log.d("DATA ENCRYPTED", encriptedResult.getDataEncripted());
-            Log.d("KSN VALUE", encriptedResult.getKsnUsed());
-        }
+	EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA);
+	if (encriptedResult != null) {
+	    Log.d("DATA ENCRYPTED", encriptedResult.getDataEncripted());
+	    Log.d("KSN VALUE", encriptedResult.getKsnUsed());
+	}
