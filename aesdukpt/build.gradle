@@ -28,6 +28,16 @@ android {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
+
 dependencies {
     implementation 'androidx.security:security-crypto:1.1.0-alpha03'
     implementation 'androidx.security:security-identity-credential:1.0.0-alpha02'
