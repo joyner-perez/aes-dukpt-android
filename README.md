@@ -19,7 +19,7 @@ How to install
 2. Add the dependency:
 
 		dependencies {
-			implementation 'com.github.joyner-perez:aes-dukpt-android:1.0.0'
+			implementation 'com.github.joyner-perez:aes-dukpt-android:1.0.1'
 		}
 		
 How to use
