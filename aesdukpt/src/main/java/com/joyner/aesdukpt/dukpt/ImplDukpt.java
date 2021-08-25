@@ -93,6 +93,27 @@ public class ImplDukpt {
         }
     }
 
+    /**
+     * Save Initial key value and return boolean if successful.
+     * @param context The context of app.
+     * @param keyAlias The String key alias value of .jks file for app signing.
+     * @return returns a boolean value.
+     */
+    public boolean isInitializedDukpt(Context context, String keyAlias) {
+        try {
+            EncriptedSharedPrefs encriptedSharedPrefs = new EncriptedSharedPrefs.Builder(context, keyAlias, 256).build();
+            String values = encriptedSharedPrefs.getStringValue(KEY_VALUES_AES_DUKPT);
+            if (values == null) {
+                return false;
+            } else {
+                ValuesAesDukpt valuesAesDukpt = new Gson().fromJson(values, ValuesAesDukpt.class);
+                return valuesAesDukpt != null;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     private boolean saveCurrentValues(Context context, String keyAlias) {
         String json = new Gson().toJson(buildValuesAesDukpt());
 
