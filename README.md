@@ -7,7 +7,7 @@ Note: Only data and PIN encryption
 
 **In the future i will migrate the code to kotlin**
 
-How to install
+⚙️ How to install
 --
 1. Add it in your root build.gradle at the end of repositories:
 
@@ -24,7 +24,7 @@ How to install
 			implementation 'com.github.joyner-perez:aes-dukpt-android:1.1.0'
 		}
 		
-How to use
+🕹 How to use
 --
 	ImplDukpt implDukpt = ImplDukpt.getInstance();
 	boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");
@@ -35,3 +35,12 @@ How to use
 	    Log.d("DATA ENCRYPTED", encriptedResult.getDataEncripted());
 	    Log.d("KSN VALUE", encriptedResult.getKsnUsed());
 	}
+
+👀 **Be careful**
+Derived Working Key | AES-128 BDK | AES-192 BDK | AES-256 BDK
+------------------- |-------------|-------------|------------
+2TDEA Working Key   |   Allowed   |   Allowed   |   Allowed
+3TDEA Working Key   |   Allowed   |   Allowed   |   Allowed
+AES-128 Working Key |   Allowed   |   Allowed   |   Allowed
+AES-192 Working Key | Not Allowed |   Allowed   |   Allowed
+AES-256 Working Key | Not Allowed | Not Allowed |   Allowed
