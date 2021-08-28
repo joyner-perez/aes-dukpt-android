@@ -3,7 +3,9 @@
 
 Implementation of the ANSI AES DUKPT standard: specified within Retail Financial Services Symmetric Key Management Part 3: Using Symmetric Techniques (ANSI X9.24-3:2017).
 
-Note: Only data encryption, in next release add PIN and MAC encryption
+Note: Only data and PIN encryption
+
+**In the future i will migrate the code to kotlin**
 
 How to install
 --
@@ -19,7 +21,7 @@ How to install
 2. Add the dependency:
 
 		dependencies {
-			implementation 'com.github.joyner-perez:aes-dukpt-android:1.0.1'
+			implementation 'com.github.joyner-perez:aes-dukpt-android:1.1.0'
 		}
 		
 How to use
@@ -28,7 +30,7 @@ How to use
 	boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");
 	Log.d("CREATED INITIAL KEY", result ? "SUCCESS" : "ERROR");
 
-	EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA);
+	EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA, KType.AES128);
 	if (encriptedResult != null) {
 	    Log.d("DATA ENCRYPTED", encriptedResult.getDataEncripted());
 	    Log.d("KSN VALUE", encriptedResult.getKsnUsed());
