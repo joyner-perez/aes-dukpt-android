@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");
         Log.d("CREATED INITIAL KEY", result ? "SUCCESS" : "ERROR");
 
-        EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA);
+        EncriptedResult encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "A912150391AB65A67E52883D81CE2D15", EncriptVariant.PIN, KType.AES128);
         if (encriptedResult != null) {
             Log.d("DATA ENCRYPTED", encriptedResult.getDataEncripted());
             Log.d("KSN VALUE", encriptedResult.getKsnUsed());
         }
 
-        EncriptedResult encriptedResult2 = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA);
+        EncriptedResult encriptedResult2 = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA, KType.AES128);
         if (encriptedResult2 != null) {
             Log.d("DATA ENCRYPTED", encriptedResult2.getDataEncripted());
             Log.d("KSN VALUE", encriptedResult2.getKsnUsed());

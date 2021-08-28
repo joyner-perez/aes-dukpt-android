@@ -29,7 +29,7 @@ public class ImplDukpt {
      * @param variant Encript variant, can be EncriptVariant.DATA, EncriptVariant.PIN, EncriptVariant.MAC.
      * @return returns a EncriptedResult value or null if an error occurred.
      */
-    public EncriptedResult encriptDataWithDUKPT(Context context, String keyAlias, String dataToEncript, EncriptVariant variant) {
+    public EncriptedResult encriptDataWithDUKPT(Context context, String keyAlias, String dataToEncript, EncriptVariant variant, KType kType) {
         try {
             EncriptedSharedPrefs encriptedSharedPrefs = new EncriptedSharedPrefs.Builder(context, keyAlias, 256).build();
             String values = encriptedSharedPrefs.getStringValue(KEY_VALUES_AES_DUKPT);
@@ -51,20 +51,25 @@ public class ImplDukpt {
                 }
             }
 
+            String dataEncripted = null;
             switch (variant) {
                 case PIN:
-                    //return new EncriptedResult(encriptDataVariantPin(context, keyAlias, bBdk, bKsn, dataToEncript, algoritm), ksnValue, ksnCounter);
+                    byte[] keyEncription = AesDukpt.generateWorkingKeys(KeyUsage._PINEncryption, getKeyType(kType));
+                    dataEncripted = AesDukpt.toHex(AesDukpt.encryptAes(keyEncription, AesDukpt.toByteArray(AesDukpt.paddingDataText(dataToEncript))));
+                    break;
                 case DATA:
-                    byte[] keyEncription = AesDukpt.generateWorkingKeys(KeyUsage._DataEncryptionEncrypt, KeyType._AES128);
-                    String dataEncripted = AesDukpt.toHex(AesDukpt.encryptAes(keyEncription, AesDukpt.toByteArray(AesDukpt.paddingDataText(dataToEncript))));
-
-                    saveCurrentValues(context, keyAlias);
-
-                    return new EncriptedResult(dataEncripted, buildKsnForCurrentTx(), AesDukpt.getgCounter() - 1);
-                case MAC:
-                    //return new EncriptedResult(encriptDataVariantMac(context, keyAlias, bBdk, bKsn, dataToEncript, algoritm), ksnValue, ksnCounter);
+                    keyEncription = AesDukpt.generateWorkingKeys(KeyUsage._DataEncryptionEncrypt, getKeyType(kType));
+                    dataEncripted = AesDukpt.toHex(AesDukpt.encryptAes(keyEncription, AesDukpt.toByteArray(AesDukpt.paddingDataText(dataToEncript))));
+                    break;
                 default:
-                    return null;
+                    break;
+            }
+
+            if (dataEncripted == null) {
+                return null;
+            } else {
+                saveCurrentValues(context, keyAlias);
+                return new EncriptedResult(dataEncripted, buildKsnForCurrentTx(), AesDukpt.getgCounter() - 1);
             }
         } catch (Exception e) {
             Log.e("DUKPT exception: ", e.getMessage());
