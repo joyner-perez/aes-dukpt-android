@@ -37,6 +37,7 @@ Note: Only data and PIN encryption
 	}
 
 👀 **Be careful**
+
 Derived Working Key | AES-128 BDK | AES-192 BDK | AES-256 BDK
 ------------------- |-------------|-------------|------------
 2TDEA Working Key   |   Allowed   |   Allowed   |   Allowed
