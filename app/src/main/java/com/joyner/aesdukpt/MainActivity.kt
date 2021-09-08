@@ -2,7 +2,6 @@ package com.joyner.aesdukpt
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.joyner.aesdukpt.dukpt.EncriptVariant
 import com.joyner.aesdukpt.dukpt.ImplDukpt.Companion.instance
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun onClickGetDukptEncriptedValue(view: View?) {
+    fun onClickGetDukptEncriptedValue() {
         val implDukpt = instance
         val result = implDukpt!!.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456")
         Log.d("CREATED INITIAL KEY", if (result) "SUCCESS" else "ERROR")
