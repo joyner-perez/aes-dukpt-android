@@ -3,9 +3,11 @@
 
 Implementation of the ANSI AES DUKPT standard: specified within Retail Financial Services Symmetric Key Management Part 3: Using Symmetric Techniques (ANSI X9.24-3:2017).
 
-Note: Only data and PIN encryption
+**Note: Only DATA and PIN encryption.**
 
-**In the future i will migrate the code to kotlin**
+**Show app folder example for more help**
+
+**With Kotlin**
 
 ⚙️ How to install
 --
@@ -23,8 +25,20 @@ Note: Only data and PIN encryption
 		dependencies {
 			implementation 'com.github.joyner-perez:aes-dukpt-android:1.1.0'
 		}
-		
-🕹 How to use
+
+🕹 How to use with Kotlin
+--
+	val implDukpt = instance
+	val result = implDukpt!!.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456")
+	Log.d("CREATED INITIAL KEY", if (result) "SUCCESS" else "ERROR")
+	
+	val encriptedResult = implDukpt.encriptDataWithDUKPT(this, "test", "A912150391AB65A67E52883D81CE2D15", EncriptVariant.PIN, KType.AES128)
+	if (encriptedResult != null) {
+		Log.d("DATA ENCRYPTED", encriptedResult.dataEncripted)
+		Log.d("KSN VALUE", encriptedResult.ksnUsed)
+	}
+
+🕹 How to use with Java
 --
 	ImplDukpt implDukpt = ImplDukpt.getInstance();
 	boolean result = implDukpt.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456");

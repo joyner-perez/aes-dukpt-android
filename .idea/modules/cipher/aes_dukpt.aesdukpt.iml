@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":aesdukpt" external.linked.project.path="$MODULE_DIR$/../../../aesdukpt" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.github.joyner-perez" external.system.module.version="1.1.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":aesdukpt" external.linked.project.path="$MODULE_DIR$/../../../aesdukpt" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.github.joyner-perez" external.system.module.version="1.2.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
         <option name="GRADLE_PROJECT_PATH" value=":aesdukpt" />
-        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="7.0.1" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="7.0.2" />
         <option name="LAST_KNOWN_AGP_VERSION" value="7.0.2" />
       </configuration>
     </facet>
@@ -23,6 +23,31 @@
         <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../aesdukpt/src/androidTest/res;file://$MODULE_DIR$/../../../aesdukpt/src/androidTestDebug/res;file://$MODULE_DIR$/../../../aesdukpt/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../aesdukpt/build/generated/res/resValues/androidTest/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
         <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../aesdukpt/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../aesdukpt/build/intermediates/compile_r_class_jar/debug/R.jar:/Users/joyner/.gradle/caches/transforms-3/56687d514c195737d0eddd7498fa360b/transformed/jetified-security-crypto-1.1.0-alpha03-api.jar:/Users/joyner/.gradle/caches/transforms-3/d2150c754d06d368e4432c4df8e8f53e/transformed/jetified-core-ktx-1.6.0-api.jar:/Users/joyner/.gradle/caches/transforms-3/c1d8d72a59f68aeefc7e7c875014090a/transformed/core-1.6.0-api.jar:/Users/joyner/.gradle/caches/transforms-3/f7e7043b6dddb6273c28414479d25d27/transformed/lifecycle-runtime-2.2.0-api.jar:/Users/joyner/.gradle/caches/transforms-3/c8d4c62a996464b45926ca15cfd1417c/transformed/versionedparcelable-1.1.1-api.jar:/Users/joyner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar:/Users/joyner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar:/Users/joyner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar:/Users/joyner/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar:/Users/joyner/.gradle/caches/transforms-3/65bee89d00ae98e392f0b9f1e2778d98/transformed/jetified-security-identity-credential-1.0.0-alpha03-api.jar:/Users/joyner/.gradle/caches/transforms-3/b51f137faaf18a14f49cdb8c32c6fe8b/transformed/jetified-annotation-experimental-1.1.0-api.jar:/Users/joyner/.gradle/caches/transforms-3/92cd4b479090e336c32b265180fb9861/transformed/jetified-aes_dukpt_x9.24-3-2017-1.0.1.jar:/Users/joyner/.gradle/caches/transforms-3/acbe24a65e3618ec10cac207c72b8fd6/transformed/jetified-gson-2.8.8.jar:/Users/joyner/.gradle/caches/transforms-3/ee2082227800cfe72d953bc212269bec/transformed/jetified-kotlin-stdlib-jdk7-1.5.30.jar:/Users/joyner/.gradle/caches/transforms-3/047d70b3e9cdf8ce35561d06376b2ce0/transformed/jetified-kotlin-stdlib-1.5.30.jar:/Users/joyner/.gradle/caches/transforms-3/8944b87225715a8d682ce21a3dffc5b9/transformed/jetified-annotations-13.0.jar:/Users/joyner/.gradle/caches/transforms-3/af10ceb8c543470d0c20f53bbcf9e796/transformed/jetified-kotlin-stdlib-common-1.5.30.jar:/Users/joyner/Library/Android/sdk/platforms/android-31/android.jar:/Users/joyner/Library/Android/sdk/build-tools/31.0.0/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="aesdukpt_debug" />
+          <option name="languageVersion" value="1.5" />
+          <option name="apiVersion" value="1.5" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
       </configuration>
     </facet>
   </component>
@@ -48,7 +73,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
@@ -59,10 +83,22 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.services:storage:1.4.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.4.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.4.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.2.0" level="project" />
     <orderEntry type="library" name="Gradle: com.github.joyner-perez:aes_dukpt_x9.24-3-2017:1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.8" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.5.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.30" level="project" />
     <orderEntry type="library" name="Gradle: androidx.security:security-crypto:1.1.0-alpha03@aar" level="project" />
-    <orderEntry type="library" name="Gradle: androidx.security:security-identity-credential:1.0.0-alpha02@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core-ktx:1.6.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core:1.6.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.security:security-identity-credential:1.0.0-alpha03@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.1.0@aar" level="project" />
   </component>
 </module>
