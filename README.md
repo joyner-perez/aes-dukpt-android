@@ -23,7 +23,7 @@ Implementation of the ANSI AES DUKPT standard: specified within Retail Financial
 2. Add the dependency:
 
 		dependencies {
-			implementation 'com.github.joyner-perez:aes-dukpt-android:1.2.0'
+			implementation 'com.github.joyner-perez:aes-dukpt-android:1.2.1'
 		}
 
 🕹 How to use with Kotlin
