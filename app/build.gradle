@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.joyner.aesdukpt"
+        applicationId "com.joyner.example"
         minSdkVersion 24
         targetSdkVersion 31
         versionCode 1
@@ -24,15 +24,31 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled true
+            shrinkResources = true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'test'
+            keyPassword 'FzBLt16470*B'
+            storeFile file('./test.jks')
+            storePassword 'FzBLt16470*B'
+        }
     }
 }
 

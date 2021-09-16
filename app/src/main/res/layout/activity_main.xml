@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/buttonTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickGetDukptEncriptedValue"
         android:text="@string/get_dukpt_encripted_value" />
 
 </LinearLayout>

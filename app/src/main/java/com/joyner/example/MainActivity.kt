@@ -1,7 +1,9 @@
-package com.joyner.aesdukpt
+package com.joyner.example
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.joyner.aesdukpt.dukpt.EncriptVariant
 import com.joyner.aesdukpt.dukpt.ImplDukpt.Companion.instance
@@ -11,6 +13,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val button = findViewById<Button>(R.id.buttonTest)
+        button.setOnClickListener{
+            onClickGetDukptEncriptedValue()
+        }
     }
 
     fun onClickGetDukptEncriptedValue() {
@@ -22,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         if (encriptedResult != null) {
             Log.d("DATA ENCRYPTED", encriptedResult.dataEncripted)
             Log.d("KSN VALUE", encriptedResult.ksnUsed)
+            Toast.makeText(this, encriptedResult.dataEncripted, Toast.LENGTH_SHORT).show()
         }
 
         val encriptedResult2 = implDukpt.encriptDataWithDUKPT(this, "test", "1234567890", EncriptVariant.DATA, KType.AES128)
