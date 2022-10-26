@@ -1,4 +1,4 @@
-package com.bayteq.android.cipher;
+package com.bayteq.android.aesdukpt;
 
 import org.junit.Test;
 

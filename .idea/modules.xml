@@ -4,7 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/aes_dukpt.iml" filepath="$PROJECT_DIR$/.idea/modules/aes_dukpt.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cipher/aes_dukpt.aesdukpt.iml" filepath="$PROJECT_DIR$/.idea/modules/cipher/aes_dukpt.aesdukpt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.main.iml" filepath="$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/aesdukpt/aes_dukpt.aesdukpt.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/aes_dukpt.app.unitTest.iml" />
     </modules>
   </component>
 </project>

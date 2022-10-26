@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun onClickGetDukptEncriptedValue() {
+    private fun onClickGetDukptEncriptedValue() {
         val implDukpt = instance
         val result = implDukpt!!.saveInitialKey(this, "test", "1273671EA26AC29AFA4D1084127652A1", KType.AES128, "1234567890123456")
         Log.d("CREATED INITIAL KEY", if (result) "SUCCESS" else "ERROR")
